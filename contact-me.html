@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Contact Me</title>
+  	<link rel="stylesheet" href="./css/reset.css">
+  	<link rel="stylesheet" href="./css/styles.css">
+    <!-- <script defer src="js/fontawesome-all.js"></script> -->
+    <link rel="stylesheet" href="./css/webfonts/fontawesome-all.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <a href="./index.html">
+          <img src="http://via.placeholder.com/250x75" alt="sr-logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="./about-me.html">About me</a></li>
+            <li><a href="./my-work.html">My work</a></li>
+            <li><a href="#">Tunes/blog?</a></li>
+            <li><a href="./contact-me.html">Contact me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="enquiry-form">
+      <div class="container">
+        <form>
+          <fieldset class="personal-details">
+            <legend>Personal details</legend>
+            <label for="firstName">First name*</label>
+            <input id="firstName" type="text" name="firstName">
+
+            <label for="lastName">Last name*</label>
+            <input id="lastName" type="text" name="lastName">
+
+            <label for="emailAddress">Email address*</label>
+            <input id="emailAddress" type="email" name="emailAddress">
+
+            <label for="phoneNumber">Phone number</label>
+            <input id="phoneNumber" type="number" name="phoneNumber">
+          </fieldset>
+          <fieldset class="enquiry">
+            <legend>Your enquiry</legend>
+            <label>Type of enquiry*</label>
+            <select id="enquiryType" name="enquiryType">
+              <optgroup label="Please select your enquiry type">
+                <option value="photography">Photography</option>
+                <option value="music">Music</option>
+                <option value="blog">Blog</option>
+              </optgroup>
+            </select>
+
+            <label>Your enquiry*</label>
+            <textarea name="yourEnquiry" id="yourEnquiry" cols="30" rows="10"></textarea>
+            <button>Submit enquiry</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <span>Designed and developed by Andy Orme</span>
+        <ul>
+          <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
