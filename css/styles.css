@@ -4,9 +4,9 @@ Client: Sarah Reuter
 Author: Andy Orme
 */
 
-/**************************************************
+/****************************************************************************************************
 BOILERPLATE
-**************************************************/
+****************************************************************************************************/
 
 /*BOX MODEL*/
 * {
@@ -28,9 +28,9 @@ BOILERPLATE
 	clear: both;
 }
 
-/**************************************************
+/****************************************************************************************************
 	UI STYLES
-**************************************************/
+****************************************************************************************************/
 
 /********************
 	TYPOGRAPHY
@@ -41,6 +41,7 @@ body {
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 1.5;
+	color: #444;
 }
 
 h1, h2, h3 {
@@ -89,12 +90,10 @@ a {
 nav ul li a {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
-	/*color: rgba(19, 75, 95, .6);*/
 	color: #97C3DB;
 }
 
 nav ul li a:hover {
-	/*color: rgba(19, 75, 95, 1);*/
 	color: #F16A6B;
 }
 
@@ -108,14 +107,25 @@ nav ul li a:hover {
 	CTA'S
 ********************/
 .cta  {
+	border-radius: 100px;
 	border: 2px solid #134B5F;
+	color: #134B5F;
+	display: block;
+	font-family: 'Oswald', sans-serif;
 	margin: 0 auto;
-	padding: 1em 5em;
+	padding: 1em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.cta:hover {
+	color: #FFF;
+	border: 2px solid #F16A6B;
+	background-color: #F16A6B;
 }
 
-/**************************************************
+/****************************************************************************************************
 	SMALL DEVICES (EQUAL TO OR GREATER THAN 400PX)
-**************************************************/
+****************************************************************************************************/
 
 @media (min-width: 400px) {
 
@@ -135,7 +145,7 @@ nav ul li a:hover {
 	}
 
 	/********************
-		NAVIGATION
+		NAV
 	********************/
 	header {
 		padding: 1em 0;
@@ -158,10 +168,55 @@ nav ul li a:hover {
 
 	nav {
 		display: none;
+		clear: both;
+		background-color: #134B5F;
+		padding: 1em;
+		text-align: center;
 	}
 
 	.fa-bars {
 		margin-top: .7em;
+	}
+
+	footer {
+		text-align: center;
+		padding: 3em 0;
+		background-color: #134B5F;
+	}
+
+	footer span {
+		display: block;
+		float: center;
+		color: #FFF;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	footer ul {
+		display: block;
+		float: center;
+		padding: 1em 0;
+	}
+
+	footer ul li {
+		display: inline-block;
+		padding: 0 2em;
+	}
+
+	footer ul li a {
+		color: #020F14;
+		font-size: 2em;
+	}
+
+	footer ul li a:hover {
+		color: #F16A6B;
+	}
+
+	/********************
+		CTA'S
+	********************/
+	.cta  {
+		width: 100%;
 	}
 
 	/********************
@@ -169,7 +224,7 @@ nav ul li a:hover {
 	********************/
 	.hero {
 		background-color: #E0EFF6;
-		padding: 3em 0 6em ;
+		padding: 3em 0 6em;
 	}
 
 	.hero h1 {
@@ -191,18 +246,36 @@ nav ul li a:hover {
 	}
 
 	.intro .img-grid {
+		display: block;
+		margin: 0 auto;
 		width: 100%;
+		margin-bottom: 1.5em;
 	}
 
 	.intro .img-grid img {
 		width: 100%;
 	}
 
+	.sign-posting {
+		padding: 2.5em 0 3em;
+	}
+
+	.sign-posting ul li {
+		margin: 1em 0; 
+	}
+
+	.sign-posting ul li h3 {
+		margin-bottom: .5em;
+		color: #134B5F;
+	}
+	.sign-posting ul li p {
+		color: #444;
+	}
 }
 
-/**************************************************
+/****************************************************************************************************
 	MEDIUM DEVICES (EQUAL TO OR GREATER THAN 768PX)
-**************************************************/
+****************************************************************************************************/
 
 @media (min-width: 768px) {
 
@@ -236,6 +309,10 @@ nav ul li a:hover {
 		display: block;
     float: right;
     margin-top: 1.5em;
+    clear: none;
+		background-color: #E0EFF6;
+		padding: 0;
+		text-align: left;
 	}
 
 	nav ul li {
@@ -246,6 +323,14 @@ nav ul li a:hover {
 	.fa-bars {
 		display: none;
 	}
+
+	/********************
+		CTA'S
+	********************/
+	.cta  {
+		width: 40%;
+	}
+
 	/********************
 		HOME
 	********************/
@@ -255,14 +340,21 @@ nav ul li a:hover {
 
 	.intro .img-grid img {
 		display: inline-block;
-		width: 49%;
+		width: 49.6%;
 		padding: .2em;
+	}
+
+	.sign-posting ul li {
+		display: inline-block;
+		float: left;
+		width: 32%;
+		margin: 0 .2em; 
 	}
 }
 
-/**************************************************
+/****************************************************************************************************
 	LARGE DEVICES (EQUAL TO OR GREATER THAN 992PX)
-**************************************************/
+****************************************************************************************************/
 
 @media (min-width: 992px) {
 	/********************
@@ -303,19 +395,26 @@ nav ul li a:hover {
 	}
 
 	/********************
+		CTA'S
+	********************/
+	.cta  {
+		width: 30%;
+	}
+
+	/********************
 		HOME
 	********************/
 
 	.intro .img-grid img {
 		display: inline-block;
-		width: 32%;
+		width: 32.9%;
 		padding: .2em;
 	}
 }
 
-/**************************************************
+/****************************************************************************************************
 	X-LARGE DEVICES (EQUAL TO OR GREATER THAN 1200PX)
-**************************************************/
+****************************************************************************************************/
 
 @media (min-width: 1200px) {
 
