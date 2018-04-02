@@ -18,8 +18,9 @@
   <body>
 
     <header>
-      <div class="container">
-        <a href="./index.html"><img src="http://via.placeholder.com/250x75" alt="sr-logo"></a>
+      <div class="container clearfix">
+        <a href="./index.html" class="mob-logo"><img src="./assets/sr-logo-2.svg" alt="sr-logo"></a>
+        <a href="./index.html" class="desktop-logo"><img src="./assets/sr-logo-1.svg" alt="sr-logo"></a>
         <i class="fas fa-bars"></i>
         <nav>
           <ul>
@@ -34,21 +35,25 @@
 
     <section class="hero">
       <div class="container">
-        <h2>This is a title for a featured project (x3)</h2>
+        <h1>Hi, I’m Sarah and I do
+          <span class="typer" id="main" data-words="photography,blogging,music" data-colors="#F16A6B" data-delay="125" data-deleteDelay="2000"></span>
+          <span class="cursor" data-owner="main"></span>
+        </h1>
+        <!-- <h2>This is a title for a featured project (x3)</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore enim earum, fugit molestiae quasi perferendis cumque ipsam fugiat velit doloribus adipisci eius, cupiditate natus repudiandae optio beatae architecto quae dolorum.
         </p>
-        <a href="./project-detail.html">View project</a>
+        <a href="./project-detail.html">View project</a> -->
       </div>
     </section>
 
     <section class="intro">
       <div class="container">
-        <h1>Hi, I'm a title</h1>
+        <!-- <h2>Hi, I'm a title</h2> -->
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis autem enim, sapiente illo perspiciatis cumque quisquam praesentium laudantium similique, dolorum molestiae, eligendi suscipit veritatis atque reiciendis excepturi eveniet. Possimus, nisi.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis autem enim, sapiente illo perspiciatis cumque quisquam praesentium laudantium similique, dolorum molestiae, eligendi suscipit veritatis atque reiciendis excepturi eveniet. Possimus, nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam alias soluta dicta nemo magnam, culpa quod tenetur similique? Iste iusto expedita, nisi explicabo adipisci id voluptatibus deserunt molestias quam quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing.
         </p>
-        <div>
+        <div class="img-grid">
           <img src="http://via.placeholder.com/380x285" alt="img-thumbnail">
           <img src="http://via.placeholder.com/380x285" alt="img-thumbnail">
           <img src="http://via.placeholder.com/380x285" alt="img-thumbnail">
@@ -57,7 +62,7 @@
           <img src="http://via.placeholder.com/380x285" alt="img-thumbnail">
         </div>
         <div>
-          <a href="#">View more work</a>
+          <a href="#" class="cta">View more work</a>
         </div>
       </div>
     </section>
@@ -106,6 +111,7 @@
 
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/main.js"></script>
+    <script src="./js/typer.js"></script>
 
   </body>
 </html>
