@@ -1,0 +1,235 @@
+/*
+Project name: Sarah Reuter Photography
+Client: Sarah Reuter
+Author: Andy Orme
+*/
+
+/**************************************************
+BOILERPLATE
+**************************************************/
+
+/*BOX MODEL*/
+* {
+	box-sizing: border-box;
+}
+
+/*CLEAR FIX*/
+.clearfix:before, 
+.cleafix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+/**************************************************
+	UI STYLES
+**************************************************/
+
+/********************
+	TYPOGRAPHY
+********************/
+
+body {
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1, h2, h3 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+h4, h5, h6 {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+/********************
+	GENERAL NAV
+********************/
+
+header {
+	padding: 1.5em 0;
+	background-color: #E0EFF6;
+}
+
+nav ul li a {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: rgba(19, 75, 95, .6);
+}
+
+nav ul li a:hover {
+	color: rgba(19, 75, 95, 1);
+}
+
+.fa-bars {
+	color: #134B5F;
+	float: right;
+	font-size: 2rem;
+}
+
+/**************************************************
+	SMALL DEVICES (EQUAL TO OR GREATER THAN 400PX)
+**************************************************/
+
+@media (min-width: 400px) {
+
+	/********************
+		LAYOUT
+	********************/
+	.container {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	/********************
+		BASE STYLES
+	********************/
+	html {
+		font-size: 16px;
+	}
+
+	/********************
+		NAVIGATION
+	********************/
+	nav {
+		display: none;
+	}
+
+	.fa-bars {
+		margin-top: .7em;
+	}
+
+}
+
+/**************************************************
+	MEDIUM DEVICES (EQUAL TO OR GREATER THAN 768PX)
+**************************************************/
+
+@media (min-width: 768px) {
+
+	/********************
+		LAYOUT
+	********************/
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	/********************
+		BASE STYLES
+	********************/
+	html {
+		font-size: 18px;
+	}
+
+	/********************
+		NAV
+	********************/
+	nav {
+		display: block;
+    float: right;
+    margin-top: 1.3em;
+	}
+
+	nav ul li {
+		display: inline-block;
+		padding: 0 .2em;
+	}
+
+	.fa-bars {
+		display: none;
+	}
+}
+
+/**************************************************
+	LARGE DEVICES (EQUAL TO OR GREATER THAN 992PX)
+**************************************************/
+
+@media (min-width: 992px) {
+
+	/********************
+		BASE STYLES
+	********************/
+	html {
+		font-size: 20px;
+	}
+
+	/********************
+		NAV
+	********************/
+	nav {
+    margin-top: 1em;
+	}
+
+	nav ul li {
+		padding: 0 .7em;
+	}
+}
+
+/**************************************************
+	X-LARGE DEVICES (EQUAL TO OR GREATER THAN 1200PX)
+**************************************************/
+
+@media (min-width: 1200px) {
+
+	/********************
+		BASE STYLES
+	********************/
+	html {
+		font-size: 22px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
