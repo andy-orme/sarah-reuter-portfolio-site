@@ -147,23 +147,23 @@ nav ul li a:hover {
 	/********************
 		NAV
 	********************/
+	header .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	header {
 		padding: 1em 0;
 		background-color: #E0EFF6;
 	}
 
-	.desktop-logo {
-		display: none;
-	}
-
-	.mob-logo {
+	header img {
 		display: block;
-		float: left;
-		width: 70px;
 	}
 
-	.mob-logo img {
-		width: 100%;
+	header .desktop-logo {
+		display: none;
 	}
 
 	nav {
@@ -174,9 +174,9 @@ nav ul li a:hover {
 		text-align: center;
 	}
 
-	.fa-bars {
+/*	.fa-bars {
 		margin-top: .7em;
-	}
+	}*/
 
 	footer {
 		text-align: center;
@@ -222,10 +222,10 @@ nav ul li a:hover {
 	/****************************************
 		HOME
 	****************************************/
-	.hero {
+/*	.hero {
 		background-color: #E0EFF6;
 		padding: 3em 0 6em;
-	}
+	}*/
 
 	.hero h1 {
 		color: #FFF;

@@ -13,4 +13,22 @@ $(function(){
 			$("nav").hide();
 		}
 	});
+
+	// Slick carousel function for when the screen is less than 768px
+	function checkWindowWidth() {
+		if ($(window).width() < 768) {
+			$('.img-grid').slick();
+		} else {
+			$('.img-grid').slick('unslick');
+		}
+	}
+
+	// Check window width on load
+	checkWindowWidth();
+
+	// Check window width on resize
+	$(window).on('resize', function() {
+		checkWindowWidth();
+	});
+	
 });
