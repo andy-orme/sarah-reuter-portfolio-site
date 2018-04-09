@@ -174,10 +174,6 @@ nav ul li a:hover {
 		text-align: center;
 	}
 
-/*	.fa-bars {
-		margin-top: .7em;
-	}*/
-
 	footer {
 		text-align: center;
 		padding: 3em 0;
@@ -222,13 +218,14 @@ nav ul li a:hover {
 	/****************************************
 		HOME
 	****************************************/
-/*	.hero {
+	.hero {
 		background-color: #E0EFF6;
 		padding: 3em 0 6em;
-	}*/
+	}
 
 	.hero h1 {
 		color: #FFF;
+		/*justify-content: center;*/
 	}
 
 	.cursor {
@@ -241,19 +238,14 @@ nav ul li a:hover {
 	}
 
 	.intro p {
-		margin: 0 auto;
+		justify-content: center;
 		margin-bottom: 3em;
 	}
 
 	.intro .img-grid {
-		display: block;
-		margin: 0 auto;
-		width: 100%;
+		/*margin: 0 auto;
+		width: 100%;*/
 		margin-bottom: 1.5em;
-	}
-
-	.intro .img-grid img {
-		width: 100%;
 	}
 
 	.sign-posting {
@@ -261,6 +253,7 @@ nav ul li a:hover {
 	}
 
 	.sign-posting ul li {
+		flex-grow: 1;
 		margin: 1em 0; 
 	}
 
@@ -342,21 +335,23 @@ nav ul li a:hover {
 	/****************************************
 		HOME
 	****************************************/
-	.intro p {
-		width: 85%;
-	}
-
 	.intro .img-grid img {
 		display: inline-block;
 		width: 49.6%;
 		padding: .2em;
 	}
 
+	.sign-posting .container ul {
+		display: flex;
+	}
+
 	.sign-posting ul li {
-		display: inline-block;
-		float: left;
-		width: 32%;
-		margin: 0 .2em; 
+		margin: 0; 
+		margin-right: 1.5em;
+	}
+
+	.sign-posting ul li:last-child {
+		margin-right: 0;
 	}
 }
 
@@ -386,6 +381,10 @@ nav ul li a:hover {
 	********************/
 	.mob-logo {
 		display: none;
+	}
+
+	header .desktop-logo {
+		display: block;
 	}
 
 	.desktop-logo {
@@ -445,10 +444,6 @@ nav ul li a:hover {
 	****************************************/
 	.hero {
 		padding: 4em 0 9em ;
-	}
-
-	.intro p {
-		width: 80%;
 	}
 }
 
