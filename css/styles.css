@@ -239,12 +239,14 @@ nav ul li a:hover {
 
 	.intro p {
 		justify-content: center;
-		margin-bottom: 3em;
+		margin-bottom: 1.5em;
+	}
+
+	.intro p:last-child {
+		margin-bottom: 0;
 	}
 
 	.intro .img-grid {
-		/*margin: 0 auto;
-		width: 100%;*/
 		margin-bottom: 1.5em;
 	}
 
@@ -271,6 +273,16 @@ nav ul li a:hover {
 	.intro p:first-of-type {
 		font-weight: 400;
 	}
+	
+	.featured-projects .container ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/*.featured-projects .container ul li {
+		flex-direction: column;
+	}*/
+
 
 }
 
@@ -351,6 +363,23 @@ nav ul li a:hover {
 	}
 
 	.sign-posting ul li:last-child {
+		margin-right: 0;
+	}
+
+	/****************************************
+		ABOUT
+	****************************************/
+	.featured-projects .container ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.featured-projects .container ul li {
+		margin-right: 2em;
+		flex-grow: 1;
+	}
+
+	.featured-projects .container ul li:last-child {
 		margin-right: 0;
 	}
 }
