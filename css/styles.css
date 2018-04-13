@@ -44,12 +44,12 @@ body {
 	color: #444;
 }
 
-h1, h2, h3 {
+h1, h2, h3, legend {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 }
 
-h4, h5, h6 {
+h4, h5, h6, {
 	font-family: 'Merriweather', sans-serif;
 	font-weight: 500;
 }
@@ -64,7 +64,7 @@ h2 {
 	font-size: 2.5rem;
 }
 
-h3 {
+h3, legend {
 	font-size: 1.3rem;
 }
 
@@ -102,6 +102,7 @@ nav ul li a:hover {
 	color: #134B5F;
 	float: right;
 	font-size: 2rem;
+	margin-top: .4em;
 }
 
 .banner {
@@ -159,11 +160,11 @@ nav ul li a:hover {
 	/********************
 		NAV
 	********************/
-	header .container {
+	/*header .container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
+	}*/
 
 	header {
 		padding: 1em 0;
@@ -171,7 +172,7 @@ nav ul li a:hover {
 	}
 
 	header img {
-		display: block;
+		display: inline-block;
 	}
 
 	header .desktop-logo {
@@ -341,6 +342,45 @@ nav ul li a:hover {
 	.listing ul li img {
 		width: 100%;
 	}
+	/****************************************
+		CONTACT ME
+	****************************************/
+
+	legend {
+		margin-bottom: 1em;
+	}
+
+	fieldset {
+		margin-bottom: 1em; 
+	}
+
+	input {
+    width: 100%;
+    padding: 1.5em 1.5em;
+    margin: 1em 0;
+/*    box-sizing: border-box;*/
+	}
+
+	select {
+		width: 100%;
+    padding: 1.5em 1.5em;
+    margin: 1em 0;
+	}
+
+	.enquiry-form {
+		padding: 2.5em 0 3em;;
+	}
+
+	textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1.5em 1.5em;
+    /*box-sizing: border-box;*/
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
 }
 
 /****************************************************************************************************
@@ -378,7 +418,7 @@ nav ul li a:hover {
 	nav {
 		display: block;
     float: right;
-    margin-top: 1.5em;
+    margin-top: .7em;
     clear: none;
 		background-color: #E0EFF6;
 		padding: 0;
