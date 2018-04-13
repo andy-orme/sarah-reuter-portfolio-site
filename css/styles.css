@@ -293,6 +293,7 @@ nav ul li a:hover {
 
 	.featured-projects .container h2 {
 		margin-top: .5em;
+		margin-bottom: .5em;
 		text-align: center;
 	}
 
@@ -325,6 +326,20 @@ nav ul li a:hover {
 	.listing ul li {
 		flex-grow: 1;
 		padding-bottom: 3em;
+	}
+
+	.listing ul li h3 {
+		margin-top: .5em;
+		margin-bottom: .5em;
+		color: #134B5F;
+	}
+
+	.listing ul li p {
+		color: #444;
+	}
+
+	.listing ul li img {
+		width: 100%;
 	}
 }
 
@@ -424,6 +439,8 @@ nav ul li a:hover {
 	.featured-projects .container ul li {
 		width: 33.3%;
 		margin-right: 1.5em;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	.featured-projects .container ul img {
