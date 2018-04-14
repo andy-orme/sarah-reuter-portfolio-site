@@ -14,12 +14,26 @@ $(function(){
 	});
 
 
-	// Waypoints
+	// Homepage hero heading waypoint
+	var heroHeading = $(".hero-heading");
+
+	heroHeading.waypoint(function(){
+		heroHeading.addClass("js-hero-heading-animate")
+	}, {offset:"25%"});
+
+	// Homepage image grid waypoint
 	var imgGrid = $(".img-grid");
 
 	imgGrid.waypoint(function(){
 		imgGrid.addClass("js-img-grid-animate")
 	}, {offset:"50%"});
+
+	// Homepage signposting waypoint
+	var signPosting = $(".sign-posting");
+
+	signPosting.waypoint(function(){
+		signPosting.addClass("js-sign-posting-animate")
+	}, {offset:"80%"});
 
 
 	// Slick carousel function for when the screen is less than 768px
