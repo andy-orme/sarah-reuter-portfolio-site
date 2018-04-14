@@ -132,21 +132,52 @@ nav ul li a:hover {
 /********************
 	CTA'S
 ********************/
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  text-align: center;
+}
+
 .cta  {
 	border-radius: 100px;
-	border: 2px solid #134B5F;
+	border: 3px solid #F16A6B;
 	color: #134B5F;
-	display: block;
 	font-family: 'Oswald', sans-serif;
-	margin: 0 auto;
-	padding: 1em 0;
-	text-align: center;
+	overflow: hidden;
+	padding: 15px 90px;
+	position: relative;
 	text-transform: uppercase;
+	transition: transform 0.3s;
+	z-index: 10;
 }
+
 .cta:hover {
 	color: #FFF;
-	border: 2px solid #F16A6B;
-	background-color: #F16A6B;
+	/*border: 2px solid #F16A6B;*/
+	/*background-color: #F16A6B;*/
+}
+
+.cta:before {
+  padding: 15px 90px;
+  content: "";
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: #F16A6B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 400ms;
+  z-index: -1;
+}
+
+.button-slide:before {
+  transform: translateX(-100%);
+}
+
+.button-slide:hover:before {
+  transform: translateX(0);
 }
 
 /****************************************************************************************************
