@@ -262,6 +262,10 @@ nav ul li a:hover {
 		margin-bottom: 1.5em;
 	}
 
+	.intro .img-grid div img {
+		width: 100%;
+	}
+
 	.sign-posting ul li {
 		flex-grow: 1;
 		margin: 3em 0; 
@@ -306,6 +310,10 @@ nav ul li a:hover {
 
 	.featured-projects ul li p {
 		color: #444;
+	}
+
+	.insta {
+		padding: 0 0 3em 0;
 	}
 
 	.insta h2 {
@@ -358,16 +366,15 @@ nav ul li a:hover {
     width: 100%;
     padding: 1.5em 1.5em;
     margin: 1em 0;
-/*    box-sizing: border-box;*/
 	}
 
 	select {
 		width: 100%;
-    padding: 1.5em 1.5em;
-    margin: 1em 0;
-    border: none;
+    background-color: #FFF;
+    border-color: initial;
     border-radius: 4px;
-    background-color: #f1f1f1;
+    margin: 1em 0;
+    padding: 1.5em 1.5em;
 	}
 
 	.enquiry-form {
@@ -375,15 +382,14 @@ nav ul li a:hover {
 	}
 
 	textarea {
-    width: 100%;
+    background-color: #FFF;
+    border-color: initial;
+    border-radius: 4px;
     height: 150px;
     padding: 1.5em 1.5em;
-    /*box-sizing: border-box;*/
-    border: none;
-    border-radius: 4px;
-    background-color: #f8f8f8;
     resize: none;
-}
+    width: 100%;
+	}
 }
 
 /****************************************************************************************************
@@ -447,10 +453,23 @@ nav ul li a:hover {
 	/****************************************
 		HOME
 	****************************************/
-	.intro .img-grid img {
-		display: inline-block;
-		width: 49.6%;
-		padding: .2em;
+	.intro .img-grid {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.intro .img-grid div {
+		width: 30.5%;
+		margin-right: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	.intro .img-grid div:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	.intro .img-grid div img {
+		width: 100%;
 	}
 
 	.sign-posting {
@@ -492,6 +511,10 @@ nav ul li a:hover {
 
 	.featured-projects .container ul li:last-child {
 		margin-right: 0;
+	}
+
+	.insta {
+		padding: 3em 0;
 	}
 
 	.insta .insta-grid {
@@ -586,11 +609,11 @@ nav ul li a:hover {
 		HOME
 	****************************************/
 
-	.intro .img-grid img {
+/*	.intro .img-grid img {
 		display: inline-block;
 		width: 32.9%;
 		padding: .2em;
-	}
+	}*/
 }
 
 /****************************************************************************************************
