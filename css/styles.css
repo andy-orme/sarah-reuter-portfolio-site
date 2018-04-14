@@ -358,6 +358,16 @@ nav ul li a:hover {
 		font-weight: 400;
 	}
 
+	.projects {
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-projects-animate {
+		opacity: 1;
+		animation: fade-up .75s;
+	}
+
 	.featured-projects .container ul li {
 		flex-grow: 1;
 		margin: 3em 0;
@@ -392,8 +402,24 @@ nav ul li a:hover {
 		text-align: center;
 	}
 
+	.insta-grid {
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-insta-grid-animate {
+		opacity: 1;
+		animation: fade-up .75s;
+	}
+
 	.insta .insta-grid img {
-		width: 32.66%;
+		width: 32.3%;
+		margin-right: .1em;
+		margin-bottom: .1em;
+	}
+
+	.insta .insta-grid img:nth-child(3n) {
+		margin-right: 0;
 	}
 	/****************************************
 		MY WORK
@@ -597,6 +623,10 @@ nav ul li a:hover {
 	.insta .insta-grid img {
 		width: 15.888%;
 		height: 100%;
+		margin-right: .5em;
+	}
+
+	.insta .insta-grid img:nth-child(3n) {
 		margin-right: .5em;
 	}
 

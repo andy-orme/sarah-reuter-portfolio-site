@@ -35,6 +35,20 @@ $(function(){
 		signPosting.addClass("js-sign-posting-animate")
 	}, {offset:"80%"});
 
+	// About me featured projects waypoint
+	var projects = $(".projects");
+
+	projects.waypoint(function(){
+		projects.addClass("js-projects-animate")
+	}, {offset:"80%"});
+
+	// About me insta-grid waypoint
+	var instaGrid = $(".insta-grid");
+
+	instaGrid.waypoint(function(){
+		instaGrid.addClass("js-insta-grid-animate")
+	}, {offset:"80%"});
+
 
 	// Slick carousel function for when the screen is less than 768px
 	function checkWindowWidth() {
