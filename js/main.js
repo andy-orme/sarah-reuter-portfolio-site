@@ -42,11 +42,32 @@ $(function(){
 		projects.addClass("js-projects-animate")
 	}, {offset:"80%"});
 
-	// About me insta-grid waypoint
+	// About me insta grid waypoint
 	var instaGrid = $(".insta-grid");
 
 	instaGrid.waypoint(function(){
 		instaGrid.addClass("js-insta-grid-animate")
+	}, {offset:"80%"});
+
+	// My work work row 1 waypoint
+	var workRow1 = $(".work-row-1");
+
+	workRow1.waypoint(function(){
+		workRow1.addClass("js-work-row-animate")
+	}, {offset:"60%"});
+
+	// My work work row 2 waypoint
+	var workRow2 = $(".work-row-2");
+
+	workRow2.waypoint(function(){
+		workRow2.addClass("js-work-row-animate")
+	}, {offset:"80%"});
+
+	// My work work row 3 waypoint
+	var workRow3 = $(".work-row-3");
+
+	workRow3.waypoint(function(){
+		workRow3.addClass("js-work-row-animate")
 	}, {offset:"80%"});
 
 

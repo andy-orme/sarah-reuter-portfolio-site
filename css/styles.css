@@ -268,9 +268,9 @@ nav ul li a:hover {
 	/********************
 		CTA'S
 	********************/
-	.cta  {
+	/*.cta  {
 		width: 100%;
-	}
+	}*/
 
 	/****************************************
 		HOME
@@ -328,13 +328,8 @@ nav ul li a:hover {
 	}
 
 	.sign-posting {
-		opacity: 0;
-		transition: all 200ms ease-in;
-	}
-
-	.js-sign-posting-animate {
 		opacity: 1;
-		animation: fade-up .8s;
+		/*transition: all 200ms ease-in;*/
 	}
 
 	.sign-posting ul li {
@@ -427,6 +422,11 @@ nav ul li a:hover {
 
 	.listing {
 		padding: 2.5em 0 3em;
+	}
+
+	.work-row-1, .work-row-2, .work-row-3 {
+		opacity: 1;
+		transition: none;
 	}
 
 	.listing ul li {
@@ -543,9 +543,9 @@ nav ul li a:hover {
 	/********************
 		CTA'S
 	********************/
-	.cta  {
+	/*.cta  {
 		width: 40%;
-	}
+	}*/
 
 	/****************************************
 		HOME
@@ -571,6 +571,13 @@ nav ul li a:hover {
 
 	.sign-posting {
 		padding: 2.5em 0 3em;
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-sign-posting-animate {
+		opacity: 1;
+		animation: fade-up .8s;
 	}
 
 	.sign-posting .container ul {
@@ -640,7 +647,16 @@ nav ul li a:hover {
 
 	.listing ul {
 		display: flex;
-		flex-wrap: wrap;
+	}
+
+	.work-row-1, .work-row-2, .work-row-3 {
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-work-row-animate {
+		opacity: 1;
+		animation: fade-up .75s;
 	}
 
 	.listing ul li {
@@ -702,9 +718,9 @@ nav ul li a:hover {
 	/********************
 		CTA'S
 	********************/
-	.cta  {
+	/*.cta  {
 		width: 30%;
-	}
+	}*/
 
 	/****************************************
 		HOME
