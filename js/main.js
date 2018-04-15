@@ -54,7 +54,7 @@ $(function(){
 
 	workRow1.waypoint(function(){
 		workRow1.addClass("js-work-row-animate")
-	}, {offset:"60%"});
+	}, {offset:"65%"});
 
 	// My work work row 2 waypoint
 	var workRow2 = $(".work-row-2");

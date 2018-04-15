@@ -140,6 +140,7 @@ nav ul li a:hover {
 }
 
 .cta  {
+	font-size: 1rem;
 	border-radius: 100px;
 	border: 3px solid #F16A6B;
 	color: #134B5F;
