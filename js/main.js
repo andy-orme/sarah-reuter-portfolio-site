@@ -73,10 +73,19 @@ $(function(){
 
 	// Slick carousel function for when the screen is less than 768px
 	function checkWindowWidth() {
-		if ($(window).width() < 768) {
-			$('.img-grid').slick();
+		var $carousel = $('.img-grid');
+
+		if ($(window).width() >= 768) {
+			if ($carousel.hasClass('slick-initialized')) {
+				$carousel.slick('unslick');
+			}
 		} else {
-			$('.img-grid').slick('unslick');
+			if (!$carousel.hasClass('slick-initialized')) {
+			  $carousel.slick({
+			  	prevArrow: $('.prev'),
+      		nextArrow: $('.next')
+			  });
+			}
 		}
 	}
 	// Check window width on load
