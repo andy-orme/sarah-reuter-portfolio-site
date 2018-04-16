@@ -321,6 +321,34 @@ nav ul li a:hover {
 		width: 100%;
 	}
 
+	.chevrons {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.5em;
+		padding: 0 1.5em;
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-chevrons-animate {
+		opacity: 1;
+		animation: fade-up .8s;
+	}
+
+	.chevrons i {
+		font-size: 2.5rem;
+	}
+
+	.button-animation {
+		opacity: 0;
+		transition: all 200ms ease-in;
+	}
+
+	.js-button-container-animate {
+		opacity: 1;
+		animation: fade-up .8s;
+	}
+
 	.sign-posting {
 		opacity: 1;
 		/*transition: all 200ms ease-in;*/
@@ -576,6 +604,19 @@ nav ul li a:hover {
 
 	.intro .img-grid div img {
 		width: 100%;
+	}
+
+	.chevrons {
+		display: none;
+	}
+
+	.button-animation {
+		opacity: 1;
+		transition: none;
+	}
+
+	.js-button-container-animate {
+		animation: none;
 	}
 
 	.sign-posting {

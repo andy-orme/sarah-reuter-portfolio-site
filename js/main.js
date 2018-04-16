@@ -28,6 +28,20 @@ $(function(){
 		imgGrid.addClass("js-img-grid-animate")
 	}, {offset:"50%"});
 
+	// Homepage chevrons waypoint
+	var chevrons = $(".chevrons");
+
+	chevrons.waypoint(function(){
+		chevrons.addClass("js-chevrons-animate")
+	}, {offset:"50%"});
+
+	// Homepage chevrons waypoint
+	var buttonAnimation = $(".button-animation");
+
+	buttonAnimation.waypoint(function(){
+		buttonAnimation.addClass("js-button-container-animate")
+	}, {offset:"80%"});
+
 	// Homepage signposting waypoint
 	var signPosting = $(".sign-posting");
 
