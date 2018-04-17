@@ -1,4 +1,20 @@
 $(function(){
+
+
+
+/* Open */
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+
+
+	
 	// On click toggle navigation open and closed
 	$("#hamburger").on("click", function() {
 		$("nav").slideToggle();
