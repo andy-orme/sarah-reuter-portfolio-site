@@ -14,29 +14,33 @@
     <!-- STANDARD CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
+
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+
+    <script src="js/modernizr.custom.js"></script>
+
   </head>
   <body>
 
     <header>
-      <div class="container clearfix">
-            <div id="myNav" class="overlay">
-        
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    
-      <div class="overlay-content">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    
-      </div>
-    </div>
-        
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      <div class="container">
         <a href="./index.html" class="mob-logo"><img src="./assets/sr-logo-2.svg" alt="sr-logo"></a>
         <a href="./index.html" class="desktop-logo"><img src="./assets/sr-logo-1.svg" alt="sr-logo"></a>
+        <i id="trigger-overlay" type="button" class="fas fa-bars"></i>
       </div>
+      <div class="overlay overlay-hugeinc">
+      <button type="button" class="overlay-close container">Close</button>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
     </header>
 
     <!-- <section class="main-content"> -->
@@ -110,6 +114,24 @@
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/main.js"></script>
-
+    <script src="js/classie.js"></script>
+    <script src="js/demo1.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -49,45 +49,113 @@ Author: Andy Orme
 	BURGER-TEST
 ****************************************************************************************************/
 
+header .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Overlay style */
 .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(19,75,95,0.9);
 }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	right: 208px;
+	top: 52px;
+	overflow: hidden;
+	border: none;
+	background: url(../assets/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
 }
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	transform: translateY(-50%);
 }
 
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
 }
 
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+}
+
+.overlay ul li a {
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #F16A6B;
+}
+
+/* Effects */
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
 }
 
 
@@ -272,13 +340,13 @@ nav ul li a:hover {
 		display: none;
 	}
 
-	nav {
+	/*nav {
 		display: none;
 		clear: both;
 		background-color: #134B5F;
 		padding: 1em;
 		text-align: center;
-	}
+	}*/
 
 	footer {
 		text-align: center;
@@ -613,7 +681,7 @@ nav ul li a:hover {
 		padding: 1.5em 0;
 	}
 
-	nav {
+	/*nav {
 		display: block;
     float: right;
     margin-top: .7em;
@@ -621,16 +689,16 @@ nav ul li a:hover {
 		background-color: #E0EFF6;
 		padding: 0;
 		text-align: left;
-	}
+	}*/
 
-	nav ul li {
+/*	nav ul li {
 		display: inline-block;
 		padding: 0 .5em;
-	}
+	}*/
 
-	.fa-bars {
+	/*.fa-bars {
 		display: none;
-	}
+	}*/
 
 	/****************************************
 		HOME
