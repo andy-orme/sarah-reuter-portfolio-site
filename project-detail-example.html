@@ -20,26 +20,22 @@
 
     <header>
       <div class="container clearfix">
+            <div id="myNav" class="overlay">
+        
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    
+      </div>
+    </div>
+        
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
         <a href="./index.html" class="mob-logo"><img src="./assets/sr-logo-2.svg" alt="sr-logo"></a>
         <a href="./index.html" class="desktop-logo"><img src="./assets/sr-logo-1.svg" alt="sr-logo"></a>
-        <div id="myNav" class="overlay">
-
-          <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-          <!-- Overlay content -->
-          <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-          </div>
-
-        </div>
-
-        <!-- Use any element to open/show the overlay navigation menu -->
-        <span onclick="openNav()">open</span>
-
       </div>
     </header>
 
