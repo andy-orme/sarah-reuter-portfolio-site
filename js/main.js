@@ -1,17 +1,58 @@
 $(function(){
-	// On click toggle navigation open and closed
-	$("#hamburger").on("click", function() {
-		$("nav").slideToggle();
-	});
-	// Stops the nav bugging if window is re-sized when toggled open
-	$(window).on("resize", function() {
-		if ($(window).width() >= 1024 && !$("nav").is(":visible")) {
-			$("nav").show();
+
+	// Navigation
+	var triggerBttn = document.getElementById( 'trigger-overlay' ),
+		overlay = document.querySelector( 'div.overlay' ),
+		closeBttn = overlay.querySelector( 'button.overlay-close' );
+		transEndEventNames = {
+			'WebkitTransition': 'webkitTransitionEnd',
+			'MozTransition': 'transitionend',
+			'OTransition': 'oTransitionEnd',
+			'msTransition': 'MSTransitionEnd',
+			'transition': 'transitionend'
+		},
+		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+		support = { transitions : Modernizr.csstransitions };
+
+	function toggleOverlay() {
+		if( classie.has( overlay, 'open' ) ) {
+			classie.remove( overlay, 'open' );
+			classie.add( overlay, 'close' );
+			var onEndTransitionFn = function( ev ) {
+				if( support.transitions ) {
+					if( ev.propertyName !== 'visibility' ) return;
+					this.removeEventListener( transEndEventName, onEndTransitionFn );
+				}
+				classie.remove( overlay, 'close' );
+			};
+			if( support.transitions ) {
+				overlay.addEventListener( transEndEventName, onEndTransitionFn );
+			}
+			else {
+				onEndTransitionFn();
+			}
 		}
-		else if ($(window).width() < 1024 && !$("nav").is (":visible")) {
-			$("nav").hide();
+		else if( !classie.has( overlay, 'close' ) ) {
+			classie.add( overlay, 'open' );
 		}
-	});
+	}
+
+	triggerBttn.addEventListener( 'click', toggleOverlay );
+	closeBttn.addEventListener( 'click', toggleOverlay );
+
+	// // On click toggle navigation open and closed
+	// $("#hamburger").on("click", function() {
+	// 	$("nav").slideToggle();
+	// });
+	// // Stops the nav bugging if window is re-sized when toggled open
+	// $(window).on("resize", function() {
+	// 	if ($(window).width() >= 1024 && !$("nav").is(":visible")) {
+	// 		$("nav").show();
+	// 	}
+	// 	else if ($(window).width() < 1024 && !$("nav").is (":visible")) {
+	// 		$("nav").hide();
+	// 	}
+	// });
 
 
 	// Homepage hero heading waypoint
@@ -108,46 +149,5 @@ $(function(){
 	$(window).on('resize', function() {
 		checkWindowWidth();
 	});
-
-
-	// Navigation
-	var triggerBttn = document.getElementById( 'trigger-overlay' ),
-		overlay = document.querySelector( 'div.overlay' ),
-		closeBttn = overlay.querySelector( 'button.overlay-close' );
-		transEndEventNames = {
-			'WebkitTransition': 'webkitTransitionEnd',
-			'MozTransition': 'transitionend',
-			'OTransition': 'oTransitionEnd',
-			'msTransition': 'MSTransitionEnd',
-			'transition': 'transitionend'
-		},
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		support = { transitions : Modernizr.csstransitions };
-
-	function toggleOverlay() {
-		if( classie.has( overlay, 'open' ) ) {
-			classie.remove( overlay, 'open' );
-			classie.add( overlay, 'close' );
-			var onEndTransitionFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.propertyName !== 'visibility' ) return;
-					this.removeEventListener( transEndEventName, onEndTransitionFn );
-				}
-				classie.remove( overlay, 'close' );
-			};
-			if( support.transitions ) {
-				overlay.addEventListener( transEndEventName, onEndTransitionFn );
-			}
-			else {
-				onEndTransitionFn();
-			}
-		}
-		else if( !classie.has( overlay, 'close' ) ) {
-			classie.add( overlay, 'open' );
-		}
-	}
-
-	triggerBttn.addEventListener( 'click', toggleOverlay );
-	closeBttn.addEventListener( 'click', toggleOverlay );
 	
 });
