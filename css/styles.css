@@ -180,7 +180,7 @@ h1, h2, h3, legend {
 	text-transform: uppercase;
 }
 
-h4, h5, h6, {
+h4, h5, h6, .pull-quote {
 	font-family: 'Merriweather', sans-serif;
 	font-weight: 500;
 }
@@ -209,6 +209,12 @@ h5 {
 
 h6 {
 	font-size: 1rem;
+}
+
+.pull-quote {
+	text-align: center;
+	line-height: 2;
+	font-style: italic;
 }
 
 a {
