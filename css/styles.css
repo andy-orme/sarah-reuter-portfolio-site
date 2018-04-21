@@ -62,6 +62,7 @@ header .container {
 	top: 0;
 	left: 0;
 	background: rgb(19,75,95);
+	z-index: 90;
 }
 
 /* Overlay closing cross */
