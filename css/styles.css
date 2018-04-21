@@ -645,6 +645,22 @@ nav ul li a:hover {
 	textarea:focus {
     border: 2px solid #134B5F;
 	}
+
+	/****************************************
+		BLOG DETAIL
+	****************************************/
+
+	.video-thumb {
+		display: flex;
+		justify-content: center;
+		margin: 2em 0;
+	}
+
+	.video-thumb img {
+		width: 100%;
+	}
+
+
 }
 
 /****************************************************************************************************
