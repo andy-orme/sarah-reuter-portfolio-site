@@ -305,6 +305,7 @@ nav ul li a:hover {
 }
 
 .cta  {
+	background-color: rgba(0,0,0,0);
 	border-radius: 100px;
 	border: 3px solid #F16A6B;
 	color: #F16A6B;
@@ -1039,7 +1040,6 @@ nav ul li a:hover {
 		padding: 4em 0 9em ;
 	}
 }
-
 
 
 
