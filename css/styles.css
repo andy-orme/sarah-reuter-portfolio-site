@@ -10,10 +10,12 @@ Author: Andy Orme
 
 @keyframes fade-up {
 	0% {
-		transform: translate(0, 30%);
+		-webkit-transform: translate(0, 30%);
+		        transform: translate(0, 30%);
 	}
 	100% {
-		transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		        transform: translate(0,0);
 	}
 }
 
@@ -23,7 +25,8 @@ Author: Andy Orme
 
 /*BOX MODEL*/
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /*CLEAR FIX*/
@@ -50,8 +53,12 @@ Author: Andy Orme
 ****************************************************************************************************/
 
 header .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 /* Overlay style */
@@ -68,8 +75,12 @@ header .container {
 /* Overlay closing cross */
 header div .container {
 	margin-top: 2.2em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 
 .overlay .overlay-close {
@@ -91,7 +102,9 @@ header div .container {
 	top: 50%;
 	height: 60%;
 	font-size: 54px;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 .overlay ul {
@@ -116,6 +129,7 @@ header div .container {
 	display: block;
 	color: #fff;
 	-webkit-transition: color 0.2s;
+	-o-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
@@ -129,6 +143,7 @@ header div .container {
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	-o-transition: opacity 0.5s, visibility 0s 0.5s;
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
@@ -136,6 +151,7 @@ header div .container {
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
 
@@ -149,7 +165,11 @@ header div .container {
 	-webkit-transform: translateY(-25%) rotateX(35deg);
 	transform: translateY(-25%) rotateX(35deg);
 	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, -webkit-transform 0.5s;
+	-o-transition: transform 0.5s, opacity 0.5s;
 	transition: transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .overlay-hugeinc.open nav ul {
@@ -259,9 +279,15 @@ nav ul li a:hover {
 	CTA'S
 ********************/
 .button-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
   text-align: center;
 }
 
@@ -276,7 +302,11 @@ nav ul li a:hover {
 	padding: .6em 3em;
 	position: relative;
 	text-transform: uppercase;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	-o-transition: transform 0.3s;
 	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s;
 	z-index: 10;
 }
 
@@ -296,16 +326,24 @@ nav ul li a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  -o-transition: transform 400ms;
   transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   z-index: -1;
 }
 
 .button-slide:before {
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .button-slide:hover:before {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 /****************************************************************************************************
@@ -395,12 +433,15 @@ nav ul li a:hover {
 
 	.hero-heading {
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-hero-heading-animate {
 		opacity: 1;
-		animation: fade-up .75s;
+		-webkit-animation: fade-up .75s;
+		        animation: fade-up .75s;
 	}
 
 	.hero h1 {
@@ -417,7 +458,9 @@ nav ul li a:hover {
 	}
 
 	.intro p {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin-bottom: 1.5em;
 	}
 
@@ -428,12 +471,15 @@ nav ul li a:hover {
 	.img-grid {
 		margin-bottom: 1.5em;
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-img-grid-animate {
 		opacity: 1;
-		animation: fade-up .8s;
+		-webkit-animation: fade-up .8s;
+		        animation: fade-up .8s;
 	}
 
 	.intro .img-grid div img {
@@ -441,8 +487,12 @@ nav ul li a:hover {
 	}
 
 	.chevrons {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 		margin-bottom: 1.5em;
 		padding: 0 1.5em;
 	}
@@ -461,7 +511,9 @@ nav ul li a:hover {
 	}
 
 	.sign-posting ul li {
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 		margin: 3em 0; 
 	}
 
@@ -483,16 +535,21 @@ nav ul li a:hover {
 
 	.projects {
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-projects-animate {
 		opacity: 1;
-		animation: fade-up .75s;
+		-webkit-animation: fade-up .75s;
+		        animation: fade-up .75s;
 	}
 
 	.featured-projects .container ul li {
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 		margin: 3em 0;
 	}
 
@@ -528,12 +585,15 @@ nav ul li a:hover {
 
 	.insta-grid {
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-insta-grid-animate {
 		opacity: 1;
-		animation: fade-up .75s;
+		-webkit-animation: fade-up .75s;
+		        animation: fade-up .75s;
 	}
 
 	.insta .insta-grid img {
@@ -556,11 +616,15 @@ nav ul li a:hover {
 
 	.work-row-1, .work-row-2, .work-row-3 {
 		opacity: 1;
+		-webkit-transition: none;
+		-o-transition: none;
 		transition: none;
 	}
 
 	.listing ul li {
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 		padding-bottom: 3em;
 	}
 
@@ -645,8 +709,12 @@ nav ul li a:hover {
 	****************************************/
 
 	.video-thumb {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin: 2em 0;
 	}
 
@@ -703,8 +771,11 @@ nav ul li a:hover {
 		HOME
 	****************************************/
 	.intro .img-grid {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 	}
 
 	.intro .img-grid div {
@@ -726,30 +797,40 @@ nav ul li a:hover {
 	}
 
 	.chevrons {
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	.button-animation {
 		opacity: 1;
+		-webkit-transition: none;
+		-o-transition: none;
 		transition: none;
 	}
 
 	.js-button-container-animate {
-		animation: none;
+		-webkit-animation: none;
+		        animation: none;
 	}
 
 	.sign-posting {
 		padding: 2.5em 0 3em;
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-sign-posting-animate {
 		opacity: 1;
-		animation: fade-up .8s;
+		-webkit-animation: fade-up .8s;
+		        animation: fade-up .8s;
 	}
 
 	.sign-posting .container ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
@@ -767,8 +848,11 @@ nav ul li a:hover {
 		ABOUT ME
 	****************************************/
 	.featured-projects .container ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: space-around;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
 	}
 
 	.featured-projects .container ul li {
@@ -791,7 +875,10 @@ nav ul li a:hover {
 	}
 
 	.insta .insta-grid {
-		flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		margin-bottom: 3em;
 	}
@@ -815,17 +902,22 @@ nav ul li a:hover {
 	****************************************/
 
 	.listing ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 
 	.work-row-1, .work-row-2, .work-row-3 {
 		opacity: 0;
+		-webkit-transition: all 200ms ease-in;
+		-o-transition: all 200ms ease-in;
 		transition: all 200ms ease-in;
 	}
 
 	.js-work-row-animate {
 		opacity: 1;
-		animation: fade-up .75s;
+		-webkit-animation: fade-up .75s;
+		        animation: fade-up .75s;
 	}
 
 	.listing ul li {
@@ -842,8 +934,12 @@ nav ul li a:hover {
 	****************************************/
 
 	.personal-fields {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-grow: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 	}
 
 	.form-column {
@@ -930,17 +1026,3 @@ nav ul li a:hover {
 		padding: 4em 0 9em ;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
