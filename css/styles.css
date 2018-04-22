@@ -19,6 +19,18 @@ Author: Andy Orme
 	}
 }
 
+@-webkit-keyframes fade-up {
+	0% {
+		-webkit-transform: translate(0, 30%);
+		        transform: translate(0, 30%);
+	}
+	100% {
+		-webkit-transform: translate(0,0);
+		        transform: translate(0,0);
+	}
+}
+
+
 /****************************************************************************************************
 	BOILERPLATE
 ****************************************************************************************************/
