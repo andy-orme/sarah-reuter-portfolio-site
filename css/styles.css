@@ -273,7 +273,7 @@ nav ul li a:hover {
 	font-size: 1rem;
 	font-weight: normal;
 	overflow: hidden;
-	padding: 15px 90px;
+	padding: .6em 3em;
 	position: relative;
 	text-transform: uppercase;
 	transition: transform 0.3s;
@@ -287,7 +287,7 @@ nav ul li a:hover {
 }
 
 .cta:before {
-  padding: 15px 90px;
+  padding: .6em 3em;
   content: "";
   color: white;
   height: 100%;
@@ -445,27 +445,15 @@ nav ul li a:hover {
 		justify-content: space-between;
 		margin-bottom: 1.5em;
 		padding: 0 1.5em;
-		opacity: 0;
-		transition: all 200ms ease-in;
-	}
-
-	.js-chevrons-animate {
-		opacity: 1;
-		animation: fade-up .8s;
 	}
 
 	.chevrons i {
+		color: #F16A6B;
 		font-size: 2.5rem;
 	}
 
-	.button-animation {
-		opacity: 0;
-		transition: all 200ms ease-in;
-	}
-
-	.js-button-container-animate {
-		opacity: 1;
-		animation: fade-up .8s;
+	.chevrons div i {
+		font-size: 1rem;
 	}
 
 	.sign-posting {
@@ -733,8 +721,12 @@ nav ul li a:hover {
 		width: 100%;
 	}
 
-	.chevrons {
+	.chevrons i {
 		display: none;
+	}
+
+	.chevrons {
+		justify-content: center;
 	}
 
 	.button-animation {
