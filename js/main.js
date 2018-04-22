@@ -149,5 +149,9 @@ $(function(){
 	$(window).on('resize', function() {
 		checkWindowWidth();
 	});
+
+	$(".my-work-btn").click(function(event){
+	    event.preventDefault();
+	});
 	
 });
